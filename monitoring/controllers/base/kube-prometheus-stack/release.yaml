@@ -31,3 +31,21 @@ spec:
   values:
     grafana:
       adminPassword: eze
+      ingress:
+        enabled: true
+
+        ingressClassName: traefik
+
+        ## Hosts must be provided if Ingress is enabled.
+        ##
+        hosts: 
+          - grs.ezeemenike.com
+        
+        ## TLS configuration for Alertmanager Ingress
+        ## Secret must be manually created in the namespace
+        ##
+        tls: []
+        # - secretName: alertmanager-general-tls
+        #   hosts:
+        #   - alertmanager.example.com
+
