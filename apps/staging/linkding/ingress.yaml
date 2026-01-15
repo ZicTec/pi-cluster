@@ -3,15 +3,15 @@ kind: Ingress
 metadata:
   name: linkding
   spec:
-  ingressClassName: traefik
-  rules:
-    - host: lds.ezeemenike.com
-      http:
-        paths:
-          - backend:
-              service:
-                name: linkding
-                port:
-                  number: 9090
-            path: /
-            pathType: Prefix
+    ingressClassName: traefik
+    rules:
+      - host: lds.ezeemenike.com
+        http:
+          paths:
+            - backend:
+                service:
+                  name: linkding
+                  port:
+                    number: 9090
+              path: /
+               pathType: Prefix
