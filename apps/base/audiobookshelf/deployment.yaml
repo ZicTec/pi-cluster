@@ -26,5 +26,17 @@ spec:
             - containerPort: 3005
               protocol: TCP
 
+          volumeMounts:
+            - name: audiobookshelf-data
+              mountPath: /etc/audiobookshelf/audiobooks
+              mountPath: /etc/audiobookshelf/podcasts
+              mountPath: /etc/audiobookshelf/config
+              mountPath: /etc/audiobookshelf/matadata
+
       restartPolicy: Always
 
+      volumes:
+        - name: audiobookshelf-data
+          persistentVolumeClaim:
+            claimName: audiobookshelf-data-pvc
+          
