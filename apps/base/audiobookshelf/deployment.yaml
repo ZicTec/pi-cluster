@@ -29,7 +29,9 @@ spec:
 
           envFrom:
             - configMapRef:
-                name: audiobookshelf-configmap 
+                name: audiobookshelf-configmap
+            - secretRef:
+                name: audiobookshelf-container-env
 
           volumeMounts:
             - name: audiobookshelf-audiobooks
