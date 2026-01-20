@@ -29,10 +29,7 @@ spec:
 
           envFrom:
             - configMapRef:
-                name: audiobookshelf-configmap
-
-          securityContext:
-            allowPrivilegeEscalation: false
+                name: audiobookshelf-configmap 
 
           volumeMounts:
             - name: audiobookshelf-audiobooks
