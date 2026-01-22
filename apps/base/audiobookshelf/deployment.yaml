@@ -39,7 +39,7 @@ spec:
             - name: audiobookshelf-config
               mountPath: /config
             - name: audiobookshelf-metadata
-              mountPath: /matadata
+              mountPath: /metadata
 
       restartPolicy: Always
 
