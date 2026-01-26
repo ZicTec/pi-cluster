@@ -13,6 +13,11 @@ spec:
       labels:
         app: mealie
     spec:
+      securityContext:
+        fsGroup: 33
+        runAsUser: 33
+        runAsGroup: 33
+
       containers:
         - name: mealie
           image: ghcr.io/mealie-recipes/mealie:v3.8.0
