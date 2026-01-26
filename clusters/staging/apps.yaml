@@ -8,7 +8,7 @@ spec:
   # dependsOn:
   #   - name: infra-configs
   retryInterval: 1m
-  timeout: 5m
+  timeout: 20s
   sourceRef:
     kind: GitRepository
     name: flux-system
